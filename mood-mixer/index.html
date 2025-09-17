@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>누에킁 - 오늘의 무드 믹서</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mood-mixer-container">
+        <div class="mixer-panel">
+            <div class="slider-group vertical">
+                <label for="energy-slider">ENERGY</label>
+                <span class="label-max">🔥 폭발적인</span>
+                <input type="range" id="energy-slider" min="1" max="100" value="50" class="slider vertical-slider">
+                <span class="label-min">💧 차분한</span>
+            </div>
+
+            <div class="main-controls">
+                <div class="slider-group horizontal">
+                    <label for="vibe-slider">VIBE</label>
+                    <div class="labels">
+                        <span>✨ 가볍게</span>
+                        <span>🌌 진중하게</span>
+                    </div>
+                    <input type="range" id="vibe-slider" min="1" max="100" value="50" class="slider">
+                </div>
+
+                <div class="keyword-group">
+                    <label>KEYWORDS</label>
+                    <div class="keywords">
+                        <button class="keyword-btn">#위로</button>
+                        <button class="keyword-btn">#자신감</button>
+                        <button class="keyword-btn">#낭만</button>
+                        <button class="keyword-btn">#고독</button>
+                        <button class="keyword-btn">#성찰</button>
+                        <button class="keyword-btn">#드라이브</button>
+                        <button class="keyword-btn">#새벽</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="find-track-btn">[ 누에킁 TRACK 찾기 ]</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
