@@ -1,61 +1,33 @@
-/* 기본 스타일 및 다크 모드 배경 */
-body {
-    background-color: #121212;
-    color: #fff;
-    font-family: 'Pretendard', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.5s ease;
-}
-
-#mood-mixer-container {
+/* style.css 에 추가 */
+.result-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
     text-align: center;
+    border: 1px solid #555;
+    animation: fadeIn 0.5s ease-in-out;
 }
-
-/* 슬라이더 스타일 */
-.slider-group { margin: 20px 0; }
-.slider { -webkit-appearance: none; width: 100%; height: 8px; background: #535353; border-radius: 5px; outline: none; opacity: 0.7; transition: opacity .2s; }
-.slider:hover { opacity: 1; }
-.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; background: #1DB954; cursor: pointer; border-radius: 50%; }
-.vertical-slider { writing-mode: bt-lr; /* IE/Edge */ -webkit-appearance: slider-vertical; /* WebKit */ width: 8px; height: 150px; }
-
-/* 키워드 버튼 */
-.keyword-btn {
-    background: transparent;
-    border: 1px solid #535353;
-    color: #fff;
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.recommend-text {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 15px;
 }
-.keyword-btn:hover { border-color: #fff; }
-.keyword-btn.active {
-    background-color: #1DB954;
-    border-color: #1DB954;
-    box-shadow: 0 0 15px #1DB954;
+.track-title {
+    font-size: 1.8em;
+    color: #eee;
+    margin-bottom: 5px;
 }
-
-/* 메인 버튼 */
-#find-track-btn {
-    background-color: #1DB954;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: transform 0.2s ease;
+.artist-album {
+    color: #bbb;
+    font-size: 1.1em;
 }
-#find-track-btn:hover { transform: scale(1.05); }
-
-/* 레이아웃 (세부 조정) */
-.mixer-panel { display: flex; align-items: center; gap: 40px; }
-.main-controls { display: flex; flex-direction: column; width: 400px; }
-/* ... (추가적인 세부 레이아웃 CSS) ... */
+.loading-text, .error-text {
+    margin-top: 25px;
+    font-size: 1.1em;
+    color: #aaa;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
